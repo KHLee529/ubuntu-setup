@@ -8,7 +8,7 @@ DIR=$(pwd)
 
 # run required scripts in `scripts`
 cd scripts
-bash setup.sh
+bash basic.sh
 bash git.sh
 bash vim.sh
 bash zsh.sh

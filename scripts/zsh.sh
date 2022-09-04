@@ -16,11 +16,11 @@ zsh_folder="${HOME}/.zsh"
 mkdir -p $zsh_folder
 
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s --batch
 
 # install autojump manually which is not able to install by apt
 cd $zsh_folder
-git clone --depth 1 git://github.com/wting/autojump.git
+git clone --depth 1 https://github.com/wting/autojump.git
 cd autojump && ./install.py
 
 cp ../config_files/zshrc $HOME/.zshrc

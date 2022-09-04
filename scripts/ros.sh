@@ -18,9 +18,9 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 #install ros2
 sudo apt upgrade -y && sudo apt update -y
-sudo apt install ros-humble-desktop -y
+sudo apt install ros-foxy-desktop -y
 
-LINE="source /opt/ros/humble/setup.zsh"
+LINE="source /opt/ros/foxy/setup.zsh"
 FILE="$HOME/.zshrc"
 grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 

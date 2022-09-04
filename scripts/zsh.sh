@@ -21,6 +21,8 @@ git clone --depth 1 git://github.com/wting/autojump.git
 cd autojump && ./install.py
 
 cp ../config_files/zshrc $HOME/.zshrc
+mkdir -p $HOME/.config/tilda
+ln ../config_files/tilda_config_0 $HOME/.config/tilda/config_0
 
 # Create bash aliases
 # ln -f ./config_files/bash_aliases /opt/.zsh/bash_aliases # Suppress error messages in case the file already exists

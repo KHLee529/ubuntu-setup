@@ -1,8 +1,11 @@
 #!/bin/bash
+set -e
+set -u
+set -x
 
 DIR=$(pwd)
 
-execute sudo apt install zsh -y
+sudo apt install zsh -y
 
 # Change default shell to zsh
 command -v zsh | sudo tee -a /etc/shells

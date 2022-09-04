@@ -25,7 +25,8 @@ pip install pipenv
 
 # additional useful tools that should probably be owned by the OS rather than linuxbrew
 sudo apt install -y htop tldr direnv tree synaptic linux-headers-generic cmake cmake-curses-gui\
-	clang-format fd-find
+	clang-format fd-find gnuplot
+sudo apt install -y texlive-full
 
 # cd ~
 # 

@@ -7,6 +7,9 @@ sudo locale-gen en_US en_US.UTF-8
 sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# install Gazebo
+curl -sSL http://get.gazebosim.org | sh
+
 # enable Universe repository setting
 sudo apt install software-properties-common -y
 sudo add-apt-repository universe

@@ -5,27 +5,27 @@ set -x
 
 DIR=$(pwd)
 
-sudo apt install zsh -y
+sudo apt install zsh tilda -y
 
 # Change default shell to zsh
 command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s "$(command -v zsh)" "${USER}"
+
+cp ../config_files/zshrc $HOME/.zshrc
+mkdir -p $HOME/.config/tilda
+ln -f ../config_files/tilda_config_0 $HOME/.config/tilda/config_0
 
 # make directory for zsh related files
 zsh_folder="${HOME}/.zsh"
 mkdir -p $zsh_folder
 
 # install oh my zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" -s --batch
+echo "n" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # install autojump manually which is not able to install by apt
 cd $zsh_folder
 git clone --depth 1 https://github.com/wting/autojump.git
-cd autojump && ./install.py
-
-cp ../config_files/zshrc $HOME/.zshrc
-mkdir -p $HOME/.config/tilda
-ln -f ../config_files/tilda_config_0 $HOME/.config/tilda/config_0
+cd autojump && python3 install.py
 
 # Create bash aliases
 # ln -f ./config_files/bash_aliases /opt/.zsh/bash_aliases # Suppress error messages in case the file already exists

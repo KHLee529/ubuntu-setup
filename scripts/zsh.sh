@@ -11,9 +11,9 @@ sudo apt install zsh tilda -y
 command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s "$(command -v zsh)" "${USER}"
 
-cp ../config_files/zshrc $HOME/.zshrc
+cp ../config-files/zshrc $HOME/.zshrc
 mkdir -p $HOME/.config/tilda
-ln -f ../config_files/tilda_config_0 $HOME/.config/tilda/config_0
+ln -f ../config-files/tilda_config_0 $HOME/.config/tilda/config_0
 
 # make directory for zsh related files
 zsh_folder="${HOME}/.zsh"

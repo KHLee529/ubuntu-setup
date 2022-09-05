@@ -11,10 +11,6 @@ sudo apt install zsh tilda -y
 command -v zsh | sudo tee -a /etc/shells
 sudo chsh -s "$(command -v zsh)" "${USER}"
 
-cp ../config-files/zshrc $HOME/.zshrc
-mkdir -p $HOME/.config/tilda
-ln -f ../config-files/tilda_config_0 $HOME/.config/tilda/config_0
-
 # make directory for zsh related files
 zsh_folder="${HOME}/.zsh"
 mkdir -p $zsh_folder
@@ -24,6 +20,10 @@ echo "n" | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh
 git clone https://github.com/MichaelAquilina/zsh-you-should-use.git ~/.oh-my-zsh/custom/plugins/you-should-use
 git clone https://github.com/zsh-users/zsh-completions ~/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+cp ../config-files/zshrc $HOME/.zshrc
+mkdir -p $HOME/.config/tilda
+ln -f ../config-files/tilda_config_0 $HOME/.config/tilda/config_0
 
 # install autojump manually which is not able to install by apt
 cd $zsh_folder

@@ -23,6 +23,5 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 # post-install setting
 sudo groupadd docker
 sudo usermod -aG docker $USER
-newgrp docker
 
 cd $DIR

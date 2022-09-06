@@ -22,6 +22,7 @@ sudo apt -y update
 sudo apt install -y build-essential wget curl git python3-pip
 
 pip install pipenv
+sudo apt install -y python-is-python3
 
 # additional useful tools that should probably be owned by the OS rather than linuxbrew
 sudo apt install -y htop tldr direnv tree synaptic linux-headers-generic cmake cmake-curses-gui\

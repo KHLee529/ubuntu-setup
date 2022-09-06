@@ -27,6 +27,12 @@ sudo apt install -y python-is-python3
 # additional useful tools that should probably be owned by the OS rather than linuxbrew
 sudo apt install -y htop tldr direnv tree synaptic linux-headers-generic cmake cmake-curses-gui\
 	clang-format fd-find gnuplot
+
+# install chrome
+wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+
+# install texlive for latex compilation
 sudo apt install -y texlive-full
 
 # cd ~

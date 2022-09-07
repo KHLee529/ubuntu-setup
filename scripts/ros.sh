@@ -27,5 +27,8 @@ LINE="source /opt/ros/humble/setup.zsh"
 FILE="$HOME/.zshrc"
 grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
+# install colcon for building ros package
+sudo apt install python3-colcon-common-extensions -y
+
 cd $DIR
 

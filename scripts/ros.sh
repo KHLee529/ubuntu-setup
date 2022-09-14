@@ -29,6 +29,8 @@ grep -q "$LINE" "$FILE" || echo "$LINE" >> "$FILE"
 
 # install colcon for building ros package
 sudo apt install python3-colcon-common-extensions -y
+# install rosdep for solving dependanciess
+sudo apt install python3-rosdep -y
 
 cd $DIR
 

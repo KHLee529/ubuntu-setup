@@ -26,7 +26,7 @@ sudo apt install -y python-is-python3
 
 # additional useful tools that should probably be owned by the OS rather than linuxbrew
 sudo apt install -y htop tldr direnv tree synaptic linux-headers-generic cmake cmake-curses-gui\
-	clang-format fd-find gnuplot
+	clang-format fd-find gnuplot cloc
 
 # install chrome
 wget -c https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
